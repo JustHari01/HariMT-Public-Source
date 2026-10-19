@@ -1,0 +1,19 @@
+/.gradle/
+/.idea/
+/build/
+/run/
+
+/fabric/.gradle/
+/fabric/build/
+/fabric/out/
+/fabric/run/
+
+/forge/build/
+/forge/out/
+/forge/run/
+
+# Generated module and buildSrc state
+/common/.gradle/
+/common/build/
+/buildSrc/.gradle/
+/buildSrc/build/
