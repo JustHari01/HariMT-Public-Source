@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "harimt",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "sources": "https://github.com/JustHari01/HariMultiThread",
+    "issues": "https://github.com/JustHari01/HariMultiThread/issues",
+    "homepage": "https://github.com/JustHari01/HariMultiThread"
+  },
+  "license": "${license}",
+  "icon": "async/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.axalotl.async.fabric.AsyncFabric"
+    ],
+    "mixinsquared": [
+      "com.axalotl.async.common.mixin.utils.AsyncModMixinCanceller"
+    ]
+  },
+  "mixins": [
+    "harimt.common.mixins.json",
+    "harimt.fabric.mixins.json"
+  ],
+  "accessWidener": "async.accesswidener",
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  },
+  "breaks": {
+    "moonrise": "*",
+    "cupboard": "*"
+  }
+}
