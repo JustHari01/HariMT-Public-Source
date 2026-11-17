@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "harimt",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/harientity",
+    "sources": "https://github.com/JustHari01/HariMT-Public-Source/tree/main/HariEntity-1.21.1",
+    "issues": "https://github.com/JustHari01/HariMT-Public-Source/issues"
+  },
+  "license": "GPL-3.0-only",
+  "icon": "async/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.axalotl.async.fabric.AsyncFabric"
+    ],
+    "mixinsquared": [
+      "com.axalotl.async.common.mixin.utils.MixinCanceller"
+    ]
+  },
+  "mixins": [
+    "async.common.mixins.json",
+    "async.fabric.mixins.json"
+  ],
+  "accessWidener": "async.accesswidener",
+  "depends": {
+    "fabricloader": "*",
+    "fabric-api": "*",
+    "minecraft": "1.21.1",
+    "java": ">=21"
+  },
+  "breaks": {
+    "moonrise": "*",
+    "openpartiesandclaims": "*"
+  },
+  "custom": {
+    "lithium:options": {
+      "mixin.alloc.chunk_random": false
+    }
+  }
+}

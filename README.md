@@ -18,3 +18,7 @@ The files at the repository root preserve the earlier HariMT 1.1.1 source snapsh
 - [HE: HariEntity on CurseForge](https://www.curseforge.com/minecraft/mc-mods/harientity)
 
 AI assistance was used in preparing the HariMultiThread compatibility port and this source index. This disclosure describes the community port only, not the upstream authors' work.
+
+## HariEntity 1.21.1 port
+
+The unofficial Fabric and NeoForge 1.21.1 port source is in [`HariEntity-1.21.1/`](HariEntity-1.21.1/). It is based on Async's `multiloader-1.21.1` source and adapts HariMT's circuit breaker and entity safety defaults. This branch does not claim feature parity with HariMT 2.0; the 1.20.1 experimental GPU collision path and manual worker scheduling controls were not carried over. See the folder README for build requirements, attribution, license, and the full AI assistance disclosure.
