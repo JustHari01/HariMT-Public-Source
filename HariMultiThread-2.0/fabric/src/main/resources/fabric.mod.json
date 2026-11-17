@@ -8,9 +8,9 @@
     "${mod_authors}"
   ],
   "contact": {
-    "sources": "https://github.com/JustHari01/HariMultiThread",
-    "issues": "https://github.com/JustHari01/HariMultiThread/issues",
-    "homepage": "https://github.com/JustHari01/HariMultiThread"
+    "sources": "https://github.com/JustHari01/HariMT-Public-Source",
+    "issues": "https://github.com/JustHari01/HariMT-Public-Source/issues",
+    "homepage": "https://github.com/JustHari01/HariMT-Public-Source"
   },
   "license": "${license}",
   "icon": "async/icon.png",

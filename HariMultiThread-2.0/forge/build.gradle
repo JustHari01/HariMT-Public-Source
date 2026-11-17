@@ -45,6 +45,18 @@ minecraft {
 
 repositories {
     maven { name = 'Bawnorton'; url = 'https://maven.bawnorton.com/releases' }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        forRepositories(fg.repository)
+        filter {
+            includeGroup 'maven.modrinth'
+        }
+    }
     mavenCentral()
     mavenLocal()
 }
@@ -68,7 +80,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
 
     // 4. Optional: Harium for navigation integration
-    compileOnly files("../common/libs/Harium-1.0.0.jar")
+    compileOnly fg.deobf("maven.modrinth:harium:VqjCHrEl")
 
     // 5. GPU: Bundle LWJGL Vulkan into the mod JAR via JarJar
     // Forge ships LWJGL 3.3.1 core but NOT the Vulkan module.
@@ -83,6 +95,10 @@ jar.finalizedBy('reobfJar')
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
+}
+
+tasks.withType(Jar).configureEach {
+    from(rootProject.file('LICENSE'))
 }
 
 idea.module { downloadJavadoc = downloadSources = true }

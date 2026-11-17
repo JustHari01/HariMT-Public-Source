@@ -3,7 +3,7 @@
 # HariMultiThread (HE: HariEntity) — Minecraft 1.20.1 ⚙️
 
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/scvCQ2qKS3)
-[![GitHub Issues](https://img.shields.io/github/issues/JustHari01/HariMultiThread?style=for-the-badge)](https://github.com/JustHari01/HariMultiThread/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/JustHari01/HariMT-Public-Source?style=for-the-badge)](https://github.com/JustHari01/HariMT-Public-Source/issues)
 </div>
 
 
@@ -43,7 +43,7 @@ Concurrent Chunk Management Engine, Fabric API, FerriteCore, Lithium, ScalableLu
 ## ⚠️ Incompatible Mods (1.20.1)
 - ⚠️ If you find an incompatibility with this 1.20.1 port, report it in this repository's issue tracker.
 
-*If you encounter an issue with this port, please report it on [JustHari01/HariMultiThread](https://github.com/JustHari01/HariMultiThread/issues).*
+*If you encounter an issue with this port, please report it in [this repository's issue tracker](https://github.com/JustHari01/HariMT-Public-Source/issues).*
 
 ## 🔧 Commands
 - `/async config toggle` — Enables or disables the mod in-game (no server restart required). Use this command to instantly see how Async improves your server.
@@ -57,6 +57,17 @@ Concurrent Chunk Management Engine, Fabric API, FerriteCore, Lithium, ScalableLu
 
 ## 📥 Download
 The Forge 1.20.1 release is available on [Modrinth](https://modrinth.com/mod/he-harientity/) and [CurseForge](https://www.curseforge.com/minecraft/mc-mods/harientity). CurseForge also has the Fabric 1.20.1 file.
+
+## Building
+
+Use JDK 17 and run the Gradle wrapper from this directory:
+
+```text
+./gradlew :forge:jarJar
+./gradlew :fabric:build
+```
+
+The first build downloads Minecraft, loader, and Maven dependencies. Both loader modules resolve Harium 2.0 from Modrinth Maven as a compile-only dependency; it is not bundled into this mod.
 
 ## 🔄 Minecraft Version Support
 This port targets Minecraft 1.20.1. Compatibility depends on the other mods installed; report port-specific problems in this repository's issue tracker.

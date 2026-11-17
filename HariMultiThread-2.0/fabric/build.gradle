@@ -72,11 +72,15 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.32'
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
 
-    // 5. Optional: Harium for navigation integration
-    compileOnly files("../common/libs/Harium-1.0.0.jar")
+    // 5. Optional: Harium API for navigation integration; compile-only, not bundled.
+    modCompileOnly("maven.modrinth:harium:VqjCHrEl")
 
     // 6. GPU: Bundle LWJGL Vulkan into the mod JAR
     include(implementation("org.lwjgl:lwjgl-vulkan:3.3.1"))
+}
+
+tasks.withType(Jar).configureEach {
+    from(rootProject.file('LICENSE'))
 }
 
 layout.buildDirectory.set(file("build"))
